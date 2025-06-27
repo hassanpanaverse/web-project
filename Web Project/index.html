@@ -1,0 +1,378 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Makeup Class Scheduler</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .uni-header {
+      text-align: center;
+      padding: 20px 0;
+      background: transparent;
+      border-bottom: none;
+    }
+
+    .uni-logo {
+      height: 70px;
+      display: inline-block;
+      border: none;
+      background: transparent;
+      margin: 0;
+      padding: 0;
+    
+    }
+
+    .navbar {
+      background-color: #000;
+      padding: 12px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      padding: 8px 12px;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #f1c40f;
+      transition: width 0.3s ease-in-out;
+      margin-top: 4px;
+    }
+
+    .nav-links a:hover {
+      color: #f1c40f;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover::after { /*underline k liye ye wala hover */
+      width: 100%;
+      font-weight: bold;
+    }
+
+    .login-btn {
+      background: #f1c40f;
+      color: #000;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      height: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .login-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .hero-section {
+      position: relative;
+      height: 400px;
+      background: url('https://lh3.googleusercontent.com/p/AF1QipP0t0grAoIb8Ns_Ms4xbm00wKAKOP_0BnR24Gnk=s1360-w1360-h1020-rw') center center / cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+      border-radius: 8px;
+      max-width: 700px;
+    }
+
+    .hero-overlay h1 {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .hero-overlay p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    .hero-btn {
+      background: #f1c40f;
+      color: #000;
+      padding: 12px 28px;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .hero-btn:hover {
+      background: #d4ac0d;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 15px;
+    }
+
+    h2 {
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 28px;
+      color: #222;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #f1c40f;
+      color: #000;
+      padding: 12px 24px;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin: 0 auto;
+    }
+
+    .btn:hover {
+      background: #d4ac0d;
+    }
+
+    .welcome-section {
+      background: #f1c40f;
+      padding: 10px 10px;
+      text-align: center;
+      color: #000;
+    }
+
+    .welcome-section h1 {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #222;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      cursor: pointer;
+    }
+
+    .dev-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .dev-card:hover {
+      transform: translateY(-40px);
+    }
+
+    .dev-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .dev-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .dev-role {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .section-underline {
+      width: 300px;
+      height: 6px;
+      background: linear-gradient(to right, #f1c40f, black);
+      border-radius: 10px;
+      margin: 30px auto;
+      position: relative;
+      animation: pulse-underline 2s infinite;
+    }
+
+    @keyframes pulse-underline {
+      0% {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scaleX(1.1);
+        opacity: 0.7;
+      }
+
+      100% {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
+
+    .footer-section {
+      background-color: #222;
+      padding: 0;
+      margin-top: 60px;
+      font-family: Arial, sans-serif;
+    }
+
+    .scroll-container {
+      overflow: hidden;
+      width: 100%;
+      height: 50px;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .scroll-text {
+      position: absolute;
+      white-space: nowrap;
+      animation: scroll-left 18s linear infinite;
+    }
+
+    .scroll-text h1 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+      color: whitesmoke;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100vw);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="uni-header">
+  <a href="MAINPROJECT.html">
+    <img src="logo.png" class="uni-logo" alt="Website Logo" />
+  </a>
+</header>
+
+  <section class="welcome-section">
+    <h1>Welcome to the Foundation University Teachers' Timetable Portal</h1>
+  </section>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="MAINPROJECT.html">Home</a></li>
+        <li><a href="schedule.html">Schedule Makeup Class</a></li>
+        <li><a href="timetable.html">View Timetable</a></li>
+      </ul>
+      <div style="display: flex; gap: 10px;">
+        <a href="form.html" class="login-btn">Faculty Login</a>
+        <a href="admin.html" class="login-btn">Admin Login</a>
+      </div>
+    </div>
+  </nav>
+  <section class="hero-section">
+    <div class="hero-overlay">
+      <h1 style="color: whitesmoke;">Manage Your Timetable & Schedule Makeup Classes</h1>
+      <p>View your weekly teaching schedule, track missed sessions, and book makeup classes with ease and accuracy</p>
+      <a href="timetable.html" class="hero-btn">View Timetable</a>
+    </div>
+  </section>
+
+  <section class="container" style="text-align:center; margin-top:50px;">
+    <h2>Schedule Your Makeup Class</h2>
+    <a href="form.html" class="btn">Book Now</a>
+  </section>
+
+  <div class="section-underline" style="margin-top: 14.5rem;"></div>
+
+  <h1>Meet the Developers</h1>
+
+  <div class="card-container">
+    <div class="dev-card">
+      <img src="Screenshot (949).png" alt="Developer 1" class="dev-photo">
+      <div class="dev-name">Abdullah Bin Sultan</div>
+      <div class="dev-role">REG#002</div>
+    </div>
+    <div class="dev-card">
+      <img src="Screenshot (950).png" alt="Developer 2" class="dev-photo">
+      <div class="dev-name">Muhammad Hassan</div>
+      <div class="dev-role">REG#028</div>
+    </div>
+    <div class="dev-card">
+      <img src="shayyan.jpg" alt="Developer 3" class="dev-photo">
+      <div class="dev-name">Mirza Shayyan Baig</div>
+      <div class="dev-role">REG#022</div>
+    </div>
+  </div>
+  <footer class="footer-section">
+    <div class="scroll-container">
+      <div class="scroll-text">
+        <h1>© 2025 Foundation University Makeup Class Scheduler. All rights reserved.</h1>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

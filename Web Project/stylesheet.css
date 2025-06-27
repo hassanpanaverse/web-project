@@ -1,0 +1,553 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
+/* Header */
+.uni-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.uni-logo {
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000;
+  padding: 12px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease-in-out;
+  margin-top: 4px;
+}
+
+.nav-links a:hover {
+  color: #f1c40f;
+  font-weight: bold;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Login Button */
+.login-btn {
+  background: #f1c40f;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Welcome Section */
+.welcome-section {
+  background: #222;
+  padding: 15px 20px;
+  text-align: center;
+  color: #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.welcome-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.welcome-section h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: whitesmoke;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 400px;
+  background: url('https://wpvip.edutopia.org/wp-content/uploads/2022/10/ray-rabadi-169hero-ugcclassroom-shutterstock.jpg?w=2880&quality=85') center top / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero-overlay p {
+  font-size: 22px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.hero-btn {
+  background: #f1c40f;
+  color: #000;
+  padding: 12px 80px;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #d4ac0d;
+}
+
+/* Timetable Section */
+.timetable-section {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.timetable-container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timetable-text,
+.timetable-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.timetable-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.timetable-text p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.timetable-btn {
+  background: #f1c40f;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.timetable-btn:hover {
+  background-color: #d4ac0d;
+}
+
+.timetable-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Makeup Classes Section */
+.makeup-classes-section {
+  background: #f0f0f5;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.makeup-classes-container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.makeup-classes-image,
+.makeup-classes-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.makeup-classes-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.makeup-classes-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.makeup-classes-text p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.makeup-classes-btn {
+  background: #f1c40f;
+  color: #000;
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.makeup-classes-btn:hover {
+  background-color: #d4ac0d;
+}
+
+/* Footer Section */
+.footer-section {
+  background: #222;
+  padding: 15px 20px;
+  text-align: center;
+  color: #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.footer-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-section h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: whitesmoke;
+}
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
+/* Header */
+.uni-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.uni-logo {
+  height: 60px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #000;
+  padding: 12px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+  margin-top: 4px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #f1c40f;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: #f1c40f;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.login-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Footer */
+.footer-section {
+  background-color: #222;
+  padding: 15px 20px;
+  text-align: center;
+  color: #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.footer-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer-section h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: whitesmoke;
+  margin: 0;
+}
+/* Timetable Hero Section */
+#timetable-hero {
+  min-height: 450px;
+  background: linear-gradient(135deg, #f7d358 0%, #f39c12 100%);
+  color: #222;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timetable-hero-container {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timetable-hero-content {
+  flex: 1;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  padding-right: 20px;
+  color: #222;
+}
+
+.timetable-hero-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.timetable-hero-content p {
+  font-size: 22px;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 100px; /* space above button */
+}
+
+/* Button placed visually lower */
+.btn-view-timetable {
+  background-color: #000;
+  color: #f1c40f;
+  padding: 14px 40px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  width: fit-content;
+  position: absolute;
+  bottom: 0;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view-timetable:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.timetable-hero-image {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: flex-end; /* ensures image sticks to right */
+  align-items: center;
+}
+
+.timetable-hero-image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+#next-section {
+  background-color: #f0f0f5;
+  color: #222;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#next-section .section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+}
+
+#next-section .section-content {
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+.timetable-table {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px; /* optional, to limit width */
+  width: 100%; /* make table responsive */
+  border-collapse: collapse;
+  background-color: #f0f0f5 ;
+}
+
+.timetable-table th,
+.timetable-table td {
+  vertical-align: middle;
+  padding: 12px 10px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.timetable-table thead th {
+  background-color: #f1c40f; /* bright yellow header */
+  color: #000;
+  border: 1px solid #ddd;
+}
+
+.timetable-table tbody td {
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+
+

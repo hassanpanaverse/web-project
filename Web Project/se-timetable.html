@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>Makeup Class Scheduler - SE Department</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .section-heading {
+  font-size: 44px;
+  font-weight: 700;
+  text-align: center;
+  color: #222;          
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem; 
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.section-content {
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+#next-section {
+  background-color: #f0f0f5;
+  color: #222;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+#next-section .section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+}
+
+#next-section .section-content {
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+   .sidebar {
+  position: fixed;
+  top: 0;
+  left: -180px;
+  width: 220px;
+  height: 100%;
+  background: linear-gradient(180deg, #2c3e50, #34495e);
+  padding-top: 30px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  overflow-x: hidden;
+}
+
+.sidebar:hover {
+  left: 0;
+}
+
+.sidebar h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #f1c40f;
+  transform: translateX(5px);
+}
+.footer-section{
+      margin-top: 13rem;
+    }
+    .timetable-table tbody tr:nth-child(2),
+  .timetable-table tbody tr:nth-child(4),
+  .timetable-table tbody tr:nth-child(6),
+  .timetable-table tbody tr:nth-child(8),
+  .timetable-table tbody tr:nth-child(10) {
+    background-color: #e6e6e6; /* Slightly darker grey */
+  }
+  .footer-section {
+  background-color: #222;
+  padding: 0;
+  margin-top: 60px;
+  font-family: Arial, sans-serif;
+}
+
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-text {
+  position: absolute;
+  white-space: nowrap;
+  animation: scroll-left 18s linear infinite;
+}
+
+.scroll-text h1 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: whitesmoke;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <header class="uni-header">
+    <a href="MAINPROJECT.html">
+    <img src="https://cdn-education.tribune.com.pk/institutes-logo/uSWGl4FYxwk8JbFp0hOaS0PQ0EtDJOJNMJvSDWLg.jpeg" alt="University Logo" class="uni-logo" />
+    </a>
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href="MAINPROJECT.html">Home</a></li>
+        <li><a href="schedule.html">Schedule Makeup Class</a></li>
+        <li><a href="timetable.html">View Timetable</a></li>
+      </ul>
+      <div style="display: flex; gap: 10px;">
+        <a href="form.html" class="login-btn">Faculty Login</a>
+        <a href="admin.html" class="login-btn">Admin Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="sidebar">
+    <h3 style="text-align:center; padding-bottom: 10px;">Departments</h3>
+    <a href="timetable.html">ET Department</a>
+    <a href="cs-timetable.html">CS Department</a>
+    <a href="se-timetable.html">SE Department</a>
+  </div>
+
+ <section id="next-section">
+  <h2 class="section-heading">INSTRUCTOR'S WEEKLY TIMETABLE - SE DEPARTMENT</h2>
+  <p class="section-content">
+    Use the timetable below to review your weekly teaching schedule. It's
+    designed to help you manage makeup sessions efficiently and stay on top
+    of your academic responsibilities.
+  </p>
+</section>
+
+
+   <section id="timetable-se" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-heading">Weekly Timetable - SE Department</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered text-center align-middle timetable-table">
+        <thead class="table-primary">
+          <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8:30 AM - 9:45 AM</td>
+            <td>Software Design<br><small>Ms. Kiran Batool</small></td>
+            <td>Web Engineering<br><small>Mr. Saqib Ali</small></td>
+            <td>Free Slot</td>
+            <td>Free Slot</td>
+            <td>Software Project Management<br><small>Mr. Ahmed Zubair</small></td>
+          </tr>
+          <tr>
+            <td><small>Room</small></td>
+            <td><small>Room 21</small></td>
+            <td><small>Room 22</small></td>
+            <td><small>Room 20</small></td>
+            <td><small>Room 23</small></td>
+            <td><small>Room 24</small></td>
+          </tr>
+          <tr>
+            <td>9:50 AM - 11:05 AM</td>
+            <td>Software Project Management<br><small>Mr. Ahmed Zubair</small></td>
+            <td>Software Design<br><small>Ms. Kiran Batool</small></td>
+            <td>Free Slot</td>
+            <td>Web Engineering<br><small>Mr. Saqib Ali</small></td>
+            <td>Free Slot</td>
+          </tr>
+          <tr>
+            <td><small>Room</small></td>
+            <td><small>Room 23</small></td>
+            <td><small>Room 24</small></td>
+            <td><small>Room 21</small></td>
+            <td><small>Room 22</small></td>
+            <td><small>Room 20</small></td>
+          </tr>
+          <tr>
+            <td>11:10 AM - 12:25 PM</td>
+            <td>Web Lab<br><small>Mr. Saqib Ali</small></td>
+            <td>Software Design<br><small>Ms. Kiran Batool</small></td>
+            <td>Free Slot</td>
+            <td>Free Slot</td>
+            <td>Software Project Management<br><small>Mr. Ahmed Zubair</small></td>
+          </tr>
+          <tr>
+            <td><small>Room</small></td>
+            <td><small>Lab 4</small></td>
+            <td><small>Room 21</small></td>
+            <td><small>Room 23</small></td>
+            <td><small>Room 20</small></td>
+            <td><small>Room 24</small></td>
+          </tr>
+          <tr>
+            <td>12:30 PM - 1:45 PM</td>
+            <td>Free Slot</td>
+            <td>Web Engineering<br><small>Mr. Saqib Ali</small></td>
+            <td>Software Design<br><small>Ms. Kiran Batool</small></td>
+            <td>Free Slot</td>
+            <td>Free Slot</td>
+          </tr>
+          <tr>
+            <td><small>Room</small></td>
+            <td><small>Room 24</small></td>
+            <td><small>Room 23</small></td>
+            <td><small>Room 22</small></td>
+            <td><small>Room 21</small></td>
+            <td><small>Room 20</small></td>
+          </tr>
+          <tr>
+            <td>1:50 PM - 3:05 PM</td>
+            <td>Software Lab<br><small>Ms. Kiran Batool</small></td>
+            <td>Free Slot</td>
+            <td>Free Slot</td>
+            <td>Web Lab<br><small>Mr. Saqib Ali</small></td>
+            <td>Free Slot</td>
+          </tr>
+          <tr>
+            <td><small>Room</small></td>
+            <td><small>Lab 4</small></td>
+            <td><small>Room 20</small></td>
+            <td><small>Room 23</small></td>
+            <td><small>Lab 5</small></td>
+            <td><small>Room 22</small></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+  </div>
+
+ <footer class="footer-section">
+  <div class="scroll-container">
+    <div class="scroll-text">
+      <h1>© 2025 Foundation University Makeup Class Scheduler. All rights reserved.</h1>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
